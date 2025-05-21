@@ -1,0 +1,450 @@
+/* Basic Reset & Body Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Using Inter for a modern look */
+    background-color: #f0f2f5; /* Lighter, softer background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Ensure Inter font is loaded if not already */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    border-radius: 12px; /* More rounded corners for the entire container */
+    overflow: hidden; /* Ensures child elements respect rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Stronger overall shadow */
+    margin: 20px; /* Add some margin around the entire dashboard */
+    max-width: calc(100% - 40px); /* Adjust max-width based on margin */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 260px; /* Slightly wider sidebar */
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 25px 0; /* More padding */
+    box-shadow: 2px 0 15px rgba(0,0,0,0.05); /* Enhanced shadow */
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f0f0f0; /* Lighter border */
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-header .logo {
+    width: 65px; /* Slightly larger logo */
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); /* More prominent shadow for logo */
+    border: 3px solid #667eea; /* Accent border for logo */
+}
+
+.sidebar-header .company-name {
+    display: block;
+    font-weight: 700; /* Bold */
+    font-size: 1.4em;
+    color: #2c3e50; /* Darker text */
+}
+
+.sidebar-header .domain {
+    font-size: 0.9em;
+    color: #7f8c8d; /* Softer gray */
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 5px; /* For scrollbar spacing */
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 8px; /* More spacing between nav items */
+}
+
+.sidebar-nav li a {
+    display: flex; /* Use flex for icon and text alignment */
+    align-items: center;
+    padding: 14px 20px; /* More padding */
+    color: #4a5568; /* Slightly darker gray for text */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    border-radius: 8px; /* More rounded nav items */
+    margin: 0 15px; /* Margin to create inner padding effect */
+    font-weight: 500;
+}
+
+.sidebar-nav li a .nav-icon {
+    margin-right: 12px; /* Space between icon and text */
+    font-size: 1.1em;
+    color: #99aab5; /* Lighter icon color */
+    transition: color 0.3s ease;
+}
+
+.sidebar-nav li a:hover {
+    background-color: #f5f7fa; /* Lighter hover background */
+    color: #2c3e50; /* Darker text on hover */
+    transform: translateX(5px); /* Subtle slide effect on hover */
+}
+
+.sidebar-nav li a:hover .nav-icon {
+    color: #667eea; /* Accent color for icon on hover */
+}
+
+.sidebar-nav li a.active {
+    background-color: #667eea; /* Primary blue for active */
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(102,126,234,0.3); /* Accent shadow */
+    transform: translateX(0); /* No slide for active */
+}
+
+.sidebar-nav li a.active .nav-icon {
+    color: white; /* White icon for active */
+}
+
+.nav-category {
+    font-size: 0.85em;
+    color: #95a5a6; /* Softer gray for categories */
+    padding: 20px 20px 8px; /* More padding for categories */
+    text-transform: uppercase;
+    letter-spacing: 0.8px; /* More letter spacing */
+    font-weight: 700;
+}
+
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 40px; /* More padding */
+    background-color: #ffffff; /* White background for main content */
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.main-header {
+    margin-bottom: 35px; /* More margin */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.main-header h1 {
+    font-size: 2.5em; /* Larger heading */
+    color: #2c3e50; /* Darker text */
+    font-weight: 800; /* Extra bold */
+}
+
+.articles-section {
+    background-color: #ffffff;
+    padding: 30px; /* More padding */
+    border-radius: 10px; /* Slightly more rounded */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); /* Enhanced shadow */
+}
+
+.search-bar {
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    width: 400px; /* Wider search input */
+    padding: 14px 18px; /* More padding */
+    border: 1px solid #e0e0e0; /* Lighter border */
+    border-radius: 8px; /* More rounded */
+    font-size: 1.05em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fcfcfc; /* Slightly off-white background */
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: #667eea; /* Accent color on focus */
+    box-shadow: 0 0 0 4px rgba(102,126,234,0.2); /* Soft focus shadow */
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 25px;
+}
+
+#articlesTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#articlesTable th,
+#articlesTable td {
+    padding: 16px 20px; /* More padding */
+    border-bottom: 1px solid #f5f5f5; /* Very light border */
+    text-align: left;
+}
+
+#articlesTable th {
+    background-color: #f8f8f8;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+}
+
+/* Rounded corners for table header cells */
+#articlesTable thead tr th:first-child {
+    border-top-left-radius: 8px;
+}
+#articlesTable thead tr th:last-child {
+    border-top-right-radius: 8px;
+}
+
+#articlesTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#articlesTable tbody tr:hover {
+    background-color: #fcfcfc; /* Very subtle hover */
+    transition: background-color 0.2s ease;
+}
+
+/* Action Button Styling */
+.action-button {
+    background-color: #e9ecef; /* Soft gray background */
+    color: #495057; /* Darker text */
+    padding: 9px 16px; /* More padding */
+    border: none;
+    border-radius: 6px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Subtle shadow */
+}
+
+.action-button:hover {
+    background-color: #dee2e6;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+    transform: translateY(-1px); /* Lift effect */
+}
+
+.action-button:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Publish Switch Styling */
+.publish-switch {
+    width: 50px; /* Wider switch */
+    height: 28px; /* Taller switch */
+    background-color: #ced4da; /* Gray for off state */
+    border-radius: 14px; /* Fully rounded */
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    box-shadow: inset 0 1px 4px rgba(0,0,0,0.15); /* Inner shadow */
+}
+
+.publish-switch.checked {
+    background-color: #28a745; /* Green for on state */
+}
+
+.publish-switch::after {
+    content: '';
+    position: absolute;
+    width: 24px; /* Slightly smaller than height */
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    top: 2px; /* Center vertically */
+    left: 2px; /* Initial position */
+    transition: 0.3s transform ease, box-shadow 0.3s ease; /* Smooth slide transition */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for the thumb */
+}
+
+.publish-switch.checked::after {
+    transform: translateX(22px); /* Move to right when checked */
+}
+
+
+.table-footer {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    text-align: right;
+    padding-top: 15px;
+    border-top: 1px solid #f5f5f5;
+    font-weight: 500;
+}
+
+/* Loading State */
+.loading-row td {
+    background-color: #fcfcfc;
+    color: #667eea;
+    font-weight: 600;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #667eea;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .dashboard-container {
+        margin: 15px;
+        max-width: calc(100% - 30px);
+    }
+    .sidebar {
+        width: 220px;
+        padding: 20px 0;
+    }
+    .sidebar-nav li a {
+        padding: 12px 15px;
+        margin: 0 10px;
+    }
+    .main-content {
+        padding: 30px;
+    }
+    .main-header h1 {
+        font-size: 2.2em;
+    }
+    .articles-section {
+        padding: 25px;
+    }
+    .search-bar input {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        border-radius: 0;
+        margin: 0;
+        max-width: 100%;
+        box-shadow: none; /* No overall shadow on small screens */
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        border-radius: 0;
+        padding: 15px 0;
+    }
+
+    .sidebar-header {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .sidebar-nav li {
+        margin: 5px;
+    }
+
+    .sidebar-nav li a {
+        padding: 10px 15px;
+        margin: 0;
+        font-size: 0.9em;
+    }
+    .sidebar-nav li a .nav-icon {
+        margin-right: 8px;
+        font-size: 1em;
+    }
+
+    .nav-category {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px;
+        border-radius: 0;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .table-container {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #articlesTable {
+        min-width: 750px; /* Ensure table doesn't collapse too much */
+    }
+
+    #articlesTable th,
+    #articlesTable td {
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 1.8em;
+    }
+    .articles-section {
+        padding: 15px;
+    }
+    .action-button {
+        padding: 7px 12px;
+        font-size: 0.85em;
+    }
+    .publish-switch {
+        width: 45px;
+        height: 25px;
+    }
+    .publish-switch::after {
+        width: 21px;
+        height: 21px;
+        top: 2px;
+        left: 2px;
+    }
+    .publish-switch.checked::after {
+        transform: translateX(20px);
+    }
+}

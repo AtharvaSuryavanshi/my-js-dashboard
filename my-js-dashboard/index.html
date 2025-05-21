@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractive Dashboard UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://placehold.co/60x60/667eea/ffffff?text=AB" alt="Logo" class="logo">
+                <span class="company-name">abun</span>
+                <span class="domain">amador.com</span>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="nav-item active"><i class="fas fa-file-alt nav-icon"></i> Articles</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-plus-circle nav-icon"></i> Create Article</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-search nav-icon"></i> Keyword Research</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-robot nav-icon"></i> AI Prompts to Article</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-layer-group nav-icon"></i> Bulk Keyword to Article</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-book-open nav-icon"></i> Longform Documents</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-pencil-ruler nav-icon"></i> Article Outline</a></li>
+                    <li class="nav-category">Tools</li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-link nav-icon"></i> Internal Links</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-handshake nav-icon"></i> Free Backlinks</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-puzzle-piece nav-icon"></i> Integrations</a></li>
+                    <li class="nav-category">Account</li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-user-friends nav-icon"></i> Affiliate Program</a></li>
+                    <li class="nav-category">Help</li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-question-circle nav-icon"></i> Help Center</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-comments nav-icon"></i> Live Chat Support</a></li>
+                    <li><a href="#" class="nav-item"><i class="fas fa-dollar-sign nav-icon"></i> Pricing</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Articles</h1>
+            </header>
+
+            <div class="articles-section">
+                <div class="search-bar">
+                    <input type="text" id="articleSearch" placeholder="Search articles...">
+                </div>
+
+                <div class="table-container">
+                    <table id="articlesTable">
+                        <thead>
+                            <tr>
+                                <th>Article Title</th>
+                                <th>Keyword [Traffic]</th>
+                                <th>Words</th>
+                                <th>Created On</th>
+                                <th>Action</th>
+                                <th>Publish</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="loadingRow" class="loading-row" style="display: none;">
+                                <td colspan="6" style="text-align: center; padding: 20px;">
+                                    <div class="spinner"></div> Loading articles...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-footer">
+                    <span>Total <span id="totalArticles">0</span> Active Titles | <span id="currentRowCount">0</span> Row — entries per page</span>
+                    </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
